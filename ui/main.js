@@ -28,6 +28,7 @@ var nameValue = nameInput.value();
 var submit = document.getElementById('submit_btn');
 submit.onclick=function()
 {
+    alert('dfsf');
    var names=['name1','name2','name3','name4'];
    
    var list='';
