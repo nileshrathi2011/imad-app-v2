@@ -24,7 +24,7 @@ button.onclick=function()
    
 };
 var nameinput = document.getElementById('name');
-var nameValue = nameInput.value();
+var nameValue = nameinput.value();
 var submit = document.getElementById('submit_btn');
 submit.onclick=function()
 {
