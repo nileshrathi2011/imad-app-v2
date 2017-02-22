@@ -28,7 +28,7 @@ var submit = document.getElementById('submit_btn');
 submit.onclick=function()
 {
     var nameinput = document.getElementById('name');
-var nameValue = nameinput.value;
+    var nameValue = nameinput.value;
       var request = new XMLHttpRequest();
     request.onreadystatechange=function()
     {
