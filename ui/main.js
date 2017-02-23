@@ -52,7 +52,7 @@ submit.onclick=function()
       }
     };
     
-    request.open('GET','http://nileshrathi2011.imad.hasura-app.io/submit-name?name='+nameValue,true);
+    request.open('GET','/submit-name?name='+nameValue,true);
     request.send(null);
   
    
