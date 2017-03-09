@@ -12,41 +12,7 @@ var config={
 };
 var app = express();
 app.use(morgan('combined'));
-var articles=
-{
-  'article-one':{
-      
-    title:'Article One',
-    heading:'HEADINF OF TITLE ONE',
-    date:'12 september',
-    content:`<p>
-                    this is the content of article one.this is the content of article one.this is the content of article one.this is the content of article one.this is the content of article one.this is the content of article one.this is the content of article one.this is the content of article one.this is the content of article one.this is the content of article one.this is the content of article one.this is the content of article one.
-                </p>
-                <p>
-                    this is the content of article one.this is the content of article one.this is the content of article one.this is the content of article one.this is the content of article one.this is the content of article one.this is the content of article one.this is the content of article one.this is the content of article one.this is the content of article one.this is the content of article one.this is the content of article one.
-                </p>
-                <p>
-                    this is the content of article one.this is the content of article one.this is the content of article one.this is the content of article one.this is the content of article one.this is the content of article one.this is the content of article one.this is the content of article one.this is the content of article one.this is the content of article one.this is the content of article one.this is the content of article one.
-                </p>`},
-    'article-two':{
-    title:'Article Two',
-    heading:'HEADINF OF TITLE Two',
-    date:'13 september',
-    content:`<p>
-                    this is the content of article Two.
-    `},
-    'article-three':{
-    title:'Article Three',
-    heading:'HEADINF OF TITLE Tree',
-    date:'14th  september',
-    content:`<p>this is the content of article Three.</p>`
-    }
-};
 
-var articleOne=
-{
-    
-};
 
 function createTemplate (data)
 {
