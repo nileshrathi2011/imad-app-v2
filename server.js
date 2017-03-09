@@ -71,7 +71,7 @@ function createTemplate (data)
             <h3>
                 ${heading}
             </h3>
-            <div> ${date}</div>
+            <div> ${date.toDateSring()}</div>
             <div>
                 ${content}
                 </p>
