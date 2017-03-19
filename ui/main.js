@@ -1,4 +1,4 @@
-var button=document.getElementById('counter');
+/*var button=document.getElementById('counter');
 
 button.onclick=function()
 {
@@ -22,7 +22,10 @@ button.onclick=function()
     
     
    
-};
+};*/ 
+
+//submit username/password to login
+
 
 var submit = document.getElementById('submit_btn');
 submit.onclick=function()
@@ -36,24 +39,24 @@ submit.onclick=function()
       {
           if(request.status === 200)
           {
-               var names=request.responseText;
-               names= JSON.parse(names);
-   
-               var list='';
-               for(var i=0;i<names.length;i++)
-               {
-                   list+= '<li>' + names[i] + '</li>';
-               }
-               var ul= document.getElementById("name_list");
-               
-               ul.innerHTML = list;
-              
+              console.log("user logged in");
+              alert("logeed in sucessfully");
+          } else if(request.status === 403){
+              alert("username/pass wrong");
+          }
+          else if(request.status === 500){
+              alert("Something went wrong with the server");
           }
       }
     };
     
-    request.open('GET','/submit-name?name='+nameValue,true);
-    request.send(null);
+     var username = document.getElementById('username').value;
+     var password = document.getElementById('password').value;
+     console.log(username);
+     console.log(passowrd);
+    request.open('POST','http://nileshrathi2011.imad.hasura-app.io/login'+nameValue,true);
+    request.setRequestHeader('Content-Type','application/json');
+    request.send(JSON.stingify({username: username , password: password}));
   
    
 };
