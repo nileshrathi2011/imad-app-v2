@@ -57,7 +57,7 @@ submit.onclick=function()
      var username = document.getElementById('username').value;
      var password = document.getElementById('password').value;
      console.log(username);
-     console.log(passowrd);
+     console.log(password);
     request.open('POST','http://nileshrathi2011.imad.hasura-app.io/login',true);
     request.setRequestHeader('Content-Type','application/json');
     request.send(JSON.stingify({username: username , password: password}));
