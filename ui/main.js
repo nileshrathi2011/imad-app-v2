@@ -30,7 +30,7 @@ button.onclick=function()
 var submit = document.getElementById('submit_btn');
 submit.onclick=function()
 {
-   
+   alert('submit button clicked');
       var request = new XMLHttpRequest();
     request.onreadystatechange=function()
     {
