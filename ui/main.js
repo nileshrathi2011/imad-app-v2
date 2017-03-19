@@ -32,11 +32,14 @@ submit.onclick=function()
 {
  //  alert('submit button clicked');
       var request = new XMLHttpRequest();
+      
+      
     request.onreadystatechange=function()
     {
+         alert('state changed');
       if(request.readyState === XMLHttpRequest.DONE)
       {
-          alert('state changed');
+         
           if(request.status === 200)
           {
               
