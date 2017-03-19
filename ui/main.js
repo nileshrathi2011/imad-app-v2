@@ -30,14 +30,16 @@ button.onclick=function()
 var submit = document.getElementById('submit_btn');
 submit.onclick=function()
 {
-   alert('submit button clicked');
+ //  alert('submit button clicked');
       var request = new XMLHttpRequest();
     request.onreadystatechange=function()
     {
       if(request.readyState === XMLHttpRequest.DONE)
       {
+          alert('state changed');
           if(request.status === 200)
           {
+              
               console.log("user logged in");
               alert("logeed in sucessfully");
           } else if(request.status === 403){
