@@ -36,7 +36,7 @@ submit.onclick=function()
       
     request.onreadystatechange=function()
     {
-         alert('state changed');
+        
       if(request.readyState === XMLHttpRequest.DONE)
       {
          
