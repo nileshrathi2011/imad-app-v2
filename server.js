@@ -107,6 +107,9 @@ app.post('/login',function(req,res){
                 var salt=dbString.split('$')[2];
                 var hashedPassword=hash(password,salt);
                 if(hashedPassword === dbString){
+                    
+                    //set the session
+                    req.session.auth ={userId: result.rows[0].id};
                 res.send('Credentials Correct');
                 }
                 else
@@ -118,6 +121,18 @@ app.post('/login',function(req,res){
         }
             
    });
+});
+
+app.get('/check-login',function(req,res){
+   
+   if(req.session && req.session.auth && req.session.auth.userId)
+   {
+       res.send('you are logged in with id '+ req.session.auth.userId );
+   }
+   else
+   {
+       res.send('you are not logged in');
+   }
 });
 
 var pool = new Pool(config);
